@@ -1,0 +1,61 @@
+[ {
+  "sourceweb" : "https://raw.github.com/yhackday/ARPetWeb/master/images/rsz_purple_buffalo.jpg",
+  "type" : "nisi",
+  "state" : "thirsty",
+  "latitude" : 37.415802,
+  "isActive" : true,
+  "name" : "Marissa's Purple Pet         ..........",
+  "longitude" : -122.024642,
+  "sourcemobile" : "https://raw.github.com/yhackday/ARPetWeb/master/images/rsz_purple_buffalo.jpg",
+  "id" : 0
+}, {
+  "sourceweb" : "https://raw.github.com/yhackday/ARPetWeb/master/images/mad3.gif",
+  "type" : "pariatur",
+  "state" : "happy",
+  "latitude" : 37.416177,
+  "isActive" : true,
+  "name" : "Pet of Samantha",
+  "longitude" : -122.027367,
+  "sourcemobile" : "https://raw.github.com/yhackday/ARPetWeb/master/images/m_Cat.jpg",
+  "id" : 1
+}, {
+  "sourceweb" : "https://raw.github.com/yhackday/ARPetWeb/master/images/sad2.gif",
+  "type" : "ea",
+  "state" : "dying",
+  "latitude" : 37.417302,
+  "isActive" : false,
+  "name" : "Pet of Johnathan",
+  "longitude" : -122.024277,
+  "sourcemobile" : "https://raw.github.com/yhackday/ARPetWeb/master/images/m_dog.jpg",
+  "id" : 2
+}, {
+  "sourceweb" : "https://raw.github.com/yhackday/ARPetWeb/master/images/wink5.gif",
+  "type" : "officia",
+  "state" : "happy",
+  "latitude" : 37.418017,
+  "isActive" : false,
+  "name" : "Pet of Guthrie",
+  "longitude" : -122.023634,
+  "sourcemobile" : "https://raw.github.com/yhackday/ARPetWeb/master/images/m_deer.jpg",
+  "id" : 3
+}, {
+  "sourceweb" : "https://raw.github.com/yhackday/ARPetWeb/master/images/wink5.gif",
+  "type" : "amet",
+  "state" : "dying",
+  "latitude" : 37.4195,
+  "isActive" : false,
+  "name" : "Pet of Rodgers",
+  "longitude" : -122.025865,
+  "sourcemobile" : "https://raw.github.com/yhackday/ARPetWeb/master/images/m_dino.jpg",
+  "id" : 4
+}, {
+  "sourceweb" : "https://raw.github.com/yhackday/ARPetWeb/master/images/pray.gif",
+  "type" : "est",
+  "state" : "dying",
+  "latitude" : 37.41754,
+  "isActive" : false,
+  "name" : "Pet of Rheana",
+  "longitude" : -122.026938,
+  "sourcemobile" : "https://raw.github.com/yhackday/ARPetWeb/master/images/m_elephant.jpg",
+  "id" : 5
+} ]

@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet World Augmented Reality </title>
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+  <link rel="stylesheet" href="http://purecss.io/combo/1.6.3?/css/layouts/blog.css">
+  <link href="https://developers.google.com/maps/documentation/javascript/examples/default.css" rel="stylesheet">
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+  <script src='http://code.jquery.com/jquery.min.js' type='text/javascript'></script>
+  <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>  
+  <script>
+      $(document).ready(function () { initialize();  });
+      function initialize() {
+        var centerMap = new google.maps.LatLng(37.417042,-122.025549);
+
+        var mapOptions = {
+            zoom: 16,
+            center: centerMap,
+            //mapTypeId: google.maps.MapTypeId.ROADMAP
+            mapTypeId: google.maps.MapTypeId.SATELLITE
+          }
+        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        var sites = [];
+        var siteCounter = 0;
+
+        //Firebase API Calls
+
+        var messageListRef = new Firebase('https://yhackday.firebaseio.com');
+        
+        //Initializing Firebase 
+        firebaseLoop();
+        petUpdate();
+        //myPetUpdate();
+
+        //Changing a value in firebase
+        messageListRef.on('child_changed', function(snapshot) {
+          firebaseLoop();
+        });
+
+        //Looping into firebase
+        function firebaseLoop() {
+          var messageListRef = new Firebase('https://yhackday.firebaseio.com');
+          messageListRef.once('value', function(allMessagesSnapshot) {
+          allMessagesSnapshot.forEach(function(messageSnapshot) {
+            // Will be called with a messageSnapshot for each message under message_list.
+            var latitude = messageSnapshot.child('latitude').val();
+            var longitude = messageSnapshot.child('longitude').val();
+            var petName = messageSnapshot.child('name').val();
+            var webMarkerImage = messageSnapshot.child('sourceweb').val()+"?ix=0";
+            var siteLatLng = new google.maps.LatLng(latitude, longitude);
+            var marker = new google.maps.Marker({
+                position: siteLatLng,
+                map: map,
+                //title: "siteCounter",
+                //zIndex: siteCounter,
+                html: petName,
+                icon: webMarkerImage,
+            });
+
+            var contentString = "Some content";
+
+            google.maps.event.addListener(marker, "click", function () {
+                //alert(this.html);
+                infowindow.setContent(this.html);
+                infowindow.open(map, this);
+            });
+          });
+        });
+        }
+
+        
+        function petUpdate() {
+           var f3 = new Firebase("https://yhackdayusa.firebaseio.com");
+            f3.on("value", function (snap) {
+                var id = snap.val();
+                if (id != null) {
+                    $('#messagesDiv').val(id.status.status);
+                }
+            });
+        }
+
+        /*
+        function Fetch(id) {
+            var f = new Firebase('https://yhackdayusa.firebaseio.com');
+            f.on("value", function (snap) {
+                var ptr = snap.val();
+                firstName = ptr.firstName;
+                lastName = ptr.lastName;
+                window.location = 'http://www.hertzgirl.com/ding.aspx?first=' + ptr.firstName + '&last=' + ptr.lastName;
+
+            });
+
+            var f = new Firebase('https://yhackdayusa.firebaseio.com');
+            f.on("value", function (snap) {
+                var id = snap.val();
+                if (id != null) {
+                    if (lastId != "0")
+                        Fetch(id);
+                    else
+                        lastId = id;
+                }
+            });
+
+        }
+
+        function getNotification() {
+            var f3 = new Firebase("https://yhackdayusa.firebaseio.com");
+            f3.on("value", function (snap) {
+                var id = snap.val();
+                if (id != null) {
+                    $('#messagesDiv').val($('#messagesDiv').val() + valueToSend);
+                }
+            });
+        }
+
+        */
+
+
+
+        function myPetUpdate(){
+            var myDataRef = new Firebase('https://yhackdayusa.firebaseio.com');
+            $('#messageInput').keypress(function (e) {
+                if (e.keyCode == 13) {
+                  var text = $('#messageInput').val();
+                  myDataRef.push({text: text});
+                  $('#messageInput').val('');
+                }
+              });
+              myDataRef.on('child_added', function(snapshot) {
+                var message = snapshot.val();
+                displayChatMessage(message.text);
+              });
+              function displayChatMessage(text) {
+                $('<div/>').text(text).appendTo($('#messagesDiv'));
+                $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+              };
+        }
+        
+        infowindow = new google.maps.InfoWindow({
+                content: "loading..."
+        });
+    }
+  </script>
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar pure-u">
+        <header class="header" style="margin: 25% 2em 0; !important">
+            <hgroup>
+                <h1 class="brand-title">Virtual Pet World</h1>
+                <h2 class="brand-tagline">An AR World for Pets</h2>
+            </hgroup>
+            <br/> <br/> <br/><br/><br/>
+             <form class="pure-form pure-form-stacked">
+                    <legend style="color:#8E8ED6">Technologies/Tools Used</legend>
+                </form>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                      <a class="pure-button-primary pure-button" href="http://purecss.io/">Yahoo ! Pure CSS Modules</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="https://www.firebase.com/">Firebase Forge</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="http://www.windowsphone.com/">Windows Phone 8</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="https://www.google.com/maps/">Google Maps</a>
+                    </li>
+                </ul>
+            </nav>
+            <br/> <br/> <br/><br/><br/>
+
+            <p class="post-meta" style="padding-left: 15px; ">
+                            By <a href="https://twitter.com/vasujain">Vasu</a>, Sreejumon, Pooran
+            </p>
+        </header>
+    </div>
+
+    <div class="pure-u-1">
+            <header class="post-header">
+                <form class="pure-form pure-form-stacked" style="padding-left: 15px; padding-right: 10px">
+                    <fieldset>
+                        <legend style="color:#8E8ED6">Pet World Updates</legend>
+                        <input type="text" class="pure-input-1" placeholder="Pet World Updates" id='messagesDiv'>
+                    </fieldset>
+                </form>
+                    <!--div id='messagesDiv' style="padding-top:15px"></div>
+                    <input type='text' id='messageInput' placeholder='Message' style="padding-left: 15px; padding-right: 10px"-->
+                    </header>
+
+            <!--Maps code -->
+            <div id="map-canvas" style="position: relative; background-color: rgb(229, 227, 223); overflow: hidden; -webkit-transform: translateZ(0);width: 100%;height: 625px;"></div>
+            <!--Maps code end-->
+
+            <footer class="footer">
+                <div class="pure-menu pure-menu-horizontal pure-menu-open">
+                    <!--ul>
+                        <li><a href="http://purecss.io/">About</a></li>
+                        <li><a href="https://yhackday.firebaseio.com/">Firebase</a></li>
+                        <li><a href="https://github.com/yhackday">Github</a></li>
+                    </ul-->
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
+<script>
+YUI().use('node-base', 'node-event-delegate', function (Y) {
+    // This just makes sure that the href="#" attached to the <a> elements
+    // don't scroll you back up the page.
+    Y.one('body').delegate('click', function (e) {
+        e.preventDefault();
+    }, 'a[href="#"]');
+});
+</script>
+
+</body>
+</html>

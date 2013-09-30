@@ -1,0 +1,15 @@
+https://raw.github.com/yhackday/ARPetWeb/master/images/laugh4.gif
+https://raw.github.com/yhackday/ARPetWeb/master/images/mad3.gif
+https://raw.github.com/yhackday/ARPetWeb/master/images/sad2.gif
+https://raw.github.com/yhackday/ARPetWeb/master/images/smiley.png
+https://raw.github.com/yhackday/ARPetWeb/master/images/wink5.gif
+https://raw.github.com/yhackday/ARPetWeb/master/images/pray.gif
+
+
+
+https://raw.github.com/yhackday/ARPetWeb/master/images/m_horse.jpg
+https://raw.github.com/yhackday/ARPetWeb/master/images/m_Cat.jpg
+https://raw.github.com/yhackday/ARPetWeb/master/images/m_deer.jpg
+https://raw.github.com/yhackday/ARPetWeb/master/images/m_dino.jpg
+https://raw.github.com/yhackday/ARPetWeb/master/images/m_elephant.jpg
+https://raw.github.com/yhackday/ARPetWeb/master/images/m_dog.jpg
