@@ -1,61 +1,112 @@
 [ {
-  "sourceweb" : "https://raw.github.com/yhackday/ARPetWeb/master/images/rsz_purple_buffalo.jpg",
+  "sourceweb" : "https://raw.github.com/vasujain/AugmentedRealityVirtualPetWorld/master/images/rsz_purple_buffalo.jpg",
   "type" : "nisi",
   "state" : "thirsty",
   "latitude" : 37.415802,
   "isActive" : true,
-  "name" : "Marissa's Purple Pet         ..........",
+  "name" : "Marissa's Purple Cow",
   "longitude" : -122.024642,
-  "sourcemobile" : "https://raw.github.com/yhackday/ARPetWeb/master/images/rsz_purple_buffalo.jpg",
+  "sourcemobile" : "https://raw.github.com/vasujain/AugmentedRealityVirtualPetWorld/master/images/rsz_purple_buffalo.jpg",
   "id" : 0
 }, {
-  "sourceweb" : "https://raw.github.com/yhackday/ARPetWeb/master/images/mad3.gif",
+  "sourceweb" : "https://raw.github.com/vasujain/AugmentedRealityVirtualPetWorld/master/images/mad3.gif",
   "type" : "pariatur",
   "state" : "happy",
   "latitude" : 37.416177,
   "isActive" : true,
   "name" : "Pet of Samantha",
   "longitude" : -122.027367,
-  "sourcemobile" : "https://raw.github.com/yhackday/ARPetWeb/master/images/m_Cat.jpg",
+  "sourcemobile" : "https://raw.github.com/vasujain/AugmentedRealityVirtualPetWorld/master/images/m_Cat.jpg",
   "id" : 1
 }, {
-  "sourceweb" : "https://raw.github.com/yhackday/ARPetWeb/master/images/sad2.gif",
+  "sourceweb" : "https://raw.github.com/vasujain/AugmentedRealityVirtualPetWorld/master/images/sad2.gif",
   "type" : "ea",
   "state" : "dying",
   "latitude" : 37.417302,
   "isActive" : false,
   "name" : "Pet of Johnathan",
   "longitude" : -122.024277,
-  "sourcemobile" : "https://raw.github.com/yhackday/ARPetWeb/master/images/m_dog.jpg",
+  "sourcemobile" : "https://raw.github.com/vasujain/AugmentedRealityVirtualPetWorld/master/images/m_dog.jpg",
   "id" : 2
 }, {
-  "sourceweb" : "https://raw.github.com/yhackday/ARPetWeb/master/images/wink5.gif",
+  "sourceweb" : "https://raw.github.com/vasujain/AugmentedRealityVirtualPetWorld/master/images/laugh4.gif",
   "type" : "officia",
   "state" : "happy",
   "latitude" : 37.418017,
   "isActive" : false,
   "name" : "Pet of Guthrie",
   "longitude" : -122.023634,
-  "sourcemobile" : "https://raw.github.com/yhackday/ARPetWeb/master/images/m_deer.jpg",
+  "sourcemobile" : "https://raw.github.com/vasujain/AugmentedRealityVirtualPetWorld/master/images/m_deer.jpg",
   "id" : 3
 }, {
-  "sourceweb" : "https://raw.github.com/yhackday/ARPetWeb/master/images/wink5.gif",
+  "sourceweb" : "https://raw.github.com/vasujain/AugmentedRealityVirtualPetWorld/master/images/wink5.gif",
   "type" : "amet",
   "state" : "dying",
   "latitude" : 37.4195,
   "isActive" : false,
   "name" : "Pet of Rodgers",
   "longitude" : -122.025865,
-  "sourcemobile" : "https://raw.github.com/yhackday/ARPetWeb/master/images/m_dino.jpg",
+  "sourcemobile" : "https://raw.github.com/vasujain/AugmentedRealityVirtualPetWorld/master/images/m_dino.jpg",
   "id" : 4
 }, {
-  "sourceweb" : "https://raw.github.com/yhackday/ARPetWeb/master/images/pray.gif",
+  "sourceweb" : "https://raw.github.com/vasujain/AugmentedRealityVirtualPetWorld/master/images/pray.gif",
   "type" : "est",
   "state" : "dying",
   "latitude" : 37.41754,
   "isActive" : false,
   "name" : "Pet of Rheana",
   "longitude" : -122.026938,
-  "sourcemobile" : "https://raw.github.com/yhackday/ARPetWeb/master/images/m_elephant.jpg",
+  "sourcemobile" : "https://raw.github.com/vasujain/AugmentedRealityVirtualPetWorld/master/images/m_elephant.jpg",
   "id" : 5
-} ]
+} , {
+  "sourceweb" : "https://raw.github.com/vasujain/AugmentedRealityVirtualPetWorld/master/images/wink5.gif",
+  "type" : "est",
+  "state" : "dying",
+  "latitude" : 37.386685,
+  "isActive" : false,
+  "name" : "Pet of Rheana",
+  "longitude" : -122.039139,
+  "sourcemobile" : "https://raw.github.com/vasujain/AugmentedRealityVirtualPetWorld/master/images/m_elephant.jpg",
+  "id" : 6
+} , {
+  "sourceweb" : "https://raw.github.com/vasujain/AugmentedRealityVirtualPetWorld/master/images/laugh4.gif",
+  "type" : "est",
+  "state" : "dying",
+  "latitude" : 37.386769,
+  "isActive" : false,
+  "name" : "Pet of Rheana",
+  "longitude" : -122.039797,
+  "sourcemobile" : "https://raw.github.com/vasujain/AugmentedRealityVirtualPetWorld/master/images/m_elephant.jpg",
+  "id" : 7
+} , {
+  "sourceweb" : "https://raw.github.com/vasujain/AugmentedRealityVirtualPetWorld/master/images/pray.gif",
+  "type" : "est",
+  "state" : "dying",
+  "latitude" : 37.386223,
+  "isActive" : false,
+  "name" : "Pet of Rheana",
+  "longitude" : -122.039453,
+  "sourcemobile" : "https://raw.github.com/vasujain/AugmentedRealityVirtualPetWorld/master/images/m_elephant.jpg",
+  "id" : 8
+} , {
+  "sourceweb" : "https://raw.github.com/vasujain/AugmentedRealityVirtualPetWorld/master/images/mad3.gif",
+  "type" : "est",
+  "state" : "dying",
+  "latitude" : 37.386351,
+  "isActive" : false,
+  "name" : "Pet of Rheana",
+  "longitude" : -122.038574,
+  "sourcemobile" : "https://raw.github.com/vasujain/AugmentedRealityVirtualPetWorld/master/images/m_elephant.jpg",
+  "id" : 9
+} , {
+  "sourceweb" : "https://raw.github.com/vasujain/AugmentedRealityVirtualPetWorld/master/images/sad2.gif",
+  "type" : "est",
+  "state" : "dying",
+  "latitude" : 37.387186,
+  "isActive" : false,
+  "name" : "Pet of Rheana",
+  "longitude" : -122.038971,
+  "sourcemobile" : "https://raw.github.com/vasujain/AugmentedRealityVirtualPetWorld/master/images/m_elephant.jpg",
+  "id" : 10
+} 
+]
