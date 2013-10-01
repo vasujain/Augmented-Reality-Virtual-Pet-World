@@ -8,7 +8,6 @@
   <body>
     <script>
     var messageListRef = new Firebase('https://yhackday.firebaseio.com');
-    
       messageListRef.once('value', function(allMessagesSnapshot) {
         allMessagesSnapshot.forEach(function(messageSnapshot) {
           // Will be called with a messageSnapshot for each message under message_list.
