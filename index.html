@@ -15,10 +15,35 @@
       $(document).ready(function () { initialize();  });
       function initialize() {
         var centerMap = new google.maps.LatLng(37.417042,-122.025549);
+        
+
+        // Try HTML5 geolocation
+          if(navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+              var pos = new google.maps.LatLng(position.coords.latitude,
+                                               position.coords.longitude);
+
+              var infowindow = new google.maps.InfoWindow({
+                map: map,
+                position: pos,
+                content: 'Location found using HTML5.'
+              });
+            
+
+                alert("Found location");
+
+              map.setCenter(pos);
+            });
+          } else {
+            alert("Browser doesn't support Geolocation");
+            //handleNoGeolocation(false);
+          }
+
+            alert("Browser doesn't support Geolocation");
 
         var mapOptions = {
             zoom: 16,
-            center: centerMap,
+            center: pos,
             //mapTypeId: google.maps.MapTypeId.ROADMAP
             mapTypeId: google.maps.MapTypeId.SATELLITE
           }
