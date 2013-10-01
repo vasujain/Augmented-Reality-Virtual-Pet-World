@@ -26,8 +26,8 @@
         initialize(lat, lon);
         }
         function noLocation() { //Pointing to Yahoo!
-            var lat = 37.417042;
-            var lon = -122.025549;
+            var lat = 37.386685;
+            var lon = -122.039139;
             initialize(lat, lon);
         }
     });
@@ -35,7 +35,7 @@
   function initialize(latitudeCenterMap, longitudeCenterMap) {
     var centerMap = new google.maps.LatLng(latitudeCenterMap, longitudeCenterMap);
     var mapOptions = {
-        zoom: 16,
+        zoom: 18,
         center: centerMap,
             //mapTypeId: google.maps.MapTypeId.ROADMAP
             mapTypeId: google.maps.MapTypeId.SATELLITE
