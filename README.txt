@@ -26,6 +26,6 @@ Business Value
 5) Pets care unit for nominal fee
 
 
-Source Code URL: https://github.com/yhackday https://github.com/sreesharp/VirtualPets
+Source Code URL: https://github.com/yhackday https://github.com/vasujain/Augmented-Reality-Virtual-Pet-World
 
 Hack URL : http://hacks.developer.yahoo.com/hack/yahoo-hack-usa-sunnyvale/virtual-pet-world/event_15/hack_945
