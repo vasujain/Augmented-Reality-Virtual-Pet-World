@@ -19,11 +19,15 @@
        function foundLocation(position) {
         var lat = position.coords.latitude;
         var lon = position.coords.longitude;
+        if(lat < 37.38 || lat > 37.45 || lon > -121.97 || lon < -122.06) {
+            lat = 37.417042;
+            lon = -122.025549;
+            }
         initialize(lat, lon);
         }
         function noLocation() { //Pointing to Yahoo!
-            var lat = 37.417042;
-            var lon = -122.025549;
+            var lat = 37.386685;
+            var lon = -122.039139;
             initialize(lat, lon);
         }
     });
